@@ -1,91 +1,69 @@
 <html>
-<head>
-    <title>Here is why i'm a fullstack dev</title>
-</head>
-<body>
-    <img src="https://www.giantfreakinrobot.com/wp-content/uploads/2022/10/hellothere.gif" atl="Hello there">
-</body>
-<body>
-    <style>
-        h1 {
-            text-align: center;
-        }
-        p {
-            color: red;
-            font-size: 30px;
-        }
-      </style>
-    <p>I'm a fullstack developer.</p>
-    <p>Here is the proof</p>
-</body>
-<ul>
-    <li>Proof 1: i made this page</li>
-    <li>Proof 2: i can use gifs</li>
-    <li>Proof 3: i know memes</li>
-</ul>
-<body>
-    <p>Leave your contact information for details.</p>
-</body>
-<form>
-    <label for="name">Name:</label>
-    <input type="text" id="name" name="name">
-    <br>
-    <label for="email">Email:</label>
-    <input type="email" id="email" name="email">
-    <br>
-</form>
-
-<head>
-    <title>Random Background Color</title>
-    <style>
-  
-      button {
-        font-size: 24px;
-        padding: 10px 20px;
-        background-color: #0066cc;
-        color: #ffffff;
-        cursor: crosshair;
-        border: none;
-      }
-    </style>
-</head>
-
-<head>
-    <script>
-        function function1(){
-            console.log('Color change');
-        // Generate random RGB values
-            var red = Math.floor(Math.random() * 256);
-            var green = Math.floor(Math.random() * 256);
-            var blue = Math.floor(Math.random() * 256);
+        <head>
+            <title>Here is why I'm a fullstack dev</title>
+            <style>
+                h1 {
+                    text-align: center;
+                }
+                p {
+                    color: red;
+                    font-size: 30px;
+                }
+                button {
+                    font-size: 24px;
+                    padding: 10px 20px;
+                    background-color: #0066cc;
+                    color: #ffffff;
+                    cursor: crosshair;
+                    border: none;
+                }
+            </style>
+            <script>
+                function function1(){
+                    console.log('Color change');
+                    // Generate random RGB values
+                    var red = Math.floor(Math.random() * 256);
+                    var green = Math.floor(Math.random() * 256);
+                    var blue = Math.floor(Math.random() * 256);
         
-        // Set the body background color to the random RGB values
-            document.body.style.backgroundColor = 'rgb(' + red + ',' + green + ',' + blue + ')';
-        }
-        function function2(){
-            console.log('Pranked ya!');
-            var newPharagraph = document.createElement('p');
-            newPharagraph.textContent='HAH pranked ya!';
-            document.body.appendChild(newPharagraph);
-        }
-    </script>
-</head>
-
-<body>
-    <button id="colorBtn">Submit</button>
-  
-    <script>
-      // Get the button element by its ID
-        var colorBtn = document.getElementById('colorBtn');
-      // Add a click event listener to the button
-      colorBtn.addEventListener('click', function() {
-        
-        function1();
-        
-        function2();
-
-      });
-    </script>
-</body>
-
-</html>
+                    // Set the body background color to the random RGB values
+                    document.body.style.backgroundColor = 'rgb(' + red + ',' + green + ',' + blue + ')';
+                }
+                function function2(){
+                    console.log('Pranked ya!');
+                    var newParagraph = document.createElement('p');
+                    newParagraph.textContent = 'HAH pranked ya!';
+                    document.body.appendChild(newParagraph);
+                }
+            </script>
+        </head>
+        <body>
+            <img src="https://www.giantfreakinrobot.com/wp-content/uploads/2022/10/hellothere.gif" atl="Hello there">
+            <h1>I'm a fullstack developer.</h1>
+            <p>Here is the proof:</p>
+            <ul>
+                <li>Proof 1: I made this page</li>
+                <li>Proof 2: I can use gifs</li>
+                <li>Proof 3: I know memes</li>
+            </ul>
+            <p>Leave your contact information for details.</p>
+            <form>
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name">
+                <br>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email">
+                <br>
+            </form>
+            <button id="colorBtn" type="button">Submit</button>
+            <script>
+                // Get the button element by its ID
+                var colorBtn = document.getElementById('colorBtn');
+                // Add a click event listener to the button
+                colorBtn.addEventListener('click', function() {
+                    function1();
+                    function2();
+                });
+            </script>
+        </body>
+    </html>
