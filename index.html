@@ -1,4 +1,4 @@
-    <!DOCTYPE html>
+       <!DOCTYPE html>
     <html>
         <head>
             <title>Here is why I'm a fullstack dev</title>
@@ -22,12 +22,9 @@
             <script>
                 function function1(){
                     console.log('Color change');
-                    // Generate random RGB values
                     var red = Math.floor(Math.random() * 256);
                     var green = Math.floor(Math.random() * 256);
                     var blue = Math.floor(Math.random() * 256);
-        
-                    // Set the body background color to the random RGB values
                     document.body.style.backgroundColor = 'rgb(' + red + ',' + green + ',' + blue + ')';
                 }
                 function function2(){
@@ -48,19 +45,28 @@
                 <li>Proof 3: I know memes</li>
             </ul>
             <p>Leave your contact information for details.</p>
-            <form>
-                <label for="name">Name:</label>
-                <input type="text" id="name" name="name">
-                <br>
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email">
-                <br>
+            <form id="myForm">
+                <label for="inputText">Input Text:</label>
+                <input type="text" id="inputText" name="inputText">
             </form>
+            <script>
+                var inputText = document.getElementById('inputText');
+                inputText.addEventListener('input', function() {
+                    var inputValue = inputText.value;
+                    var textArray = inputValue.split('');
+                    for (var i = 0; i < textArray.length; i++) {
+                        var randomIndex = Math.floor(Math.random() * textArray.length);
+                        var temp = textArray[i];
+                        textArray[i] = textArray[randomIndex];
+                        textArray[randomIndex] = temp;
+                    }
+                    var randomizedText = textArray.join('');
+                    inputText.value = randomizedText;
+                });
+            </script>
             <button id="colorBtn" type="button">Submit</button>
             <script>
-                // Get the button element by its ID
                 var colorBtn = document.getElementById('colorBtn');
-                // Add a click event listener to the button
                 colorBtn.addEventListener('click', function() {
                     function1();
                     function2();
